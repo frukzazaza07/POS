@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/report.css">
+    <script type="text/javascript" src="JavaScript/Chart.min.js"></script>
+    <title>POS</title>
+</head>
+
+<body>
+    <div class="container-fluid" style="padding:0!important;margin:0!important;">
+        <aside>
+            <div class="float-lg-left content-left-menu">
+                <div class="left-menu-head">
+                    <h6><b>รายงาน</b></h6>
+                </div>
+                <div class="left-menu-item">
+                    <p><a href="#" onclick="reportMenu(1)">รายงานยอดขาย</a></p>
+                    <p><a href="#" onclick="reportMenu(2)">รายงานโปรโมชั่น</a></p>
+                    <p><a href="#" onclick="reportMenu(3)">รายงานการยกเลิกบิลใบเสร็จ</a></p>
+                    <p><a href="#" onclick="reportMenu(4)">ลงรับสินค้า</a></p>
+
+                </div>
+
+            </div>
+        </aside>
+        <article>
+            <div class="float-lg-right container-main-content">
+                <h5 class="main-content-topic" id="mainTopic"><b>รายงานยอดขาย</b></h5>
+                <div class="main-content-head">
+
+                </div>
+                <div class="main-content-show">
+                    <table class='table table-striped'>
+                        <thead class="thead-dark head-table">
+                        </thead>
+
+                        <tbody>
+                            <span class='form-text text-danger info' id='notFound'></span>
+                        </tbody>
+                    </table>
+                    <div id="chart-container" style="width: 787px; height:393px; margin:auto;">
+                        <canvas id="graphCanvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script language="JavaScript" type="text/javascript" src="javaScript\report1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+</html>

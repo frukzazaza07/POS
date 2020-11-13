@@ -1,0 +1,396 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    font-family: Quicksand, NotoSansJP, Montserrat, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, ;
+}
+
+header {
+    width: 100%;
+}
+
+.header-grid-item-1 {
+    text-align: right;
+    padding-right: 10px;
+}
+
+#head-logout:hover {
+    cursor: pointer;
+    opacity: 0.2;
+}
+
+.header-container-grid {
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid red;
+    display: grid;
+    /* grid-template-columns: repeat(6, 10%) 1fr;*/
+    background-color: #979799;
+}
+
+.span-1,
+.span-2,
+.span-3,
+.span-4,
+.span-5,
+.span-6 {
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.span-1:hover,
+.span-2:hover,
+.span-3:hover,
+.span-4:hover,
+.span-5:hover,
+.span-6:hover {
+    text-decoration-line: underline;
+    color: blanchedalmond;
+}
+
+.main-grid {
+    height: auto;
+    width: 100%;
+    margin-top: 15px;
+}
+
+
+/* ส่วน Aside */
+
+aside {
+    width: 56%;
+    height: auto;
+    float: left;
+    background-color: silver;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.aside-grid-item-head {
+    height: auto;
+    border-radius: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 40% 15% 15% 15% 15%;
+}
+
+.aside-grid-item-head .grid-item-head {
+    border-right: 2px solid #979799;
+    background-color: aliceblue;
+}
+
+.aside-grid-item-head .grid-item-head:last-child {
+    border-right: none;
+    border-top-right-radius: 10px;
+}
+
+.grid-item-head input[type=number] {
+    height: 25px;
+    width: 40px;
+    border-radius: 2px;
+    border: 1px solid #979799;
+}
+
+input[type=text] {
+    border-radius: 2px;
+    border: 1px solid #979799;
+}
+
+.grid-item-head-productName {
+    border-right: 2px solid #979799;
+    border-top-left-radius: 10px;
+    background-color: aliceblue;
+}
+
+.aside-grid-item-detail {
+    height: auto;
+    margin-top: 0px;
+    text-align: center;
+    background-color: whitesmoke;
+    display: grid;
+    overflow: scroll;
+    /* ดีมาก */
+    grid-template-columns: 1fr;
+    border-bottom: 2px solid saddlebrown;
+}
+
+a {
+    display: inline-block;
+    color: red;
+}
+
+.grid-item-blox-menu {
+    height: auto;
+    margin-top: 0px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    text-align: center;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 40% 15% 15% 15% 15%;
+    border-bottom: 1px dashed #979797;
+}
+
+.aside-grid-item-customer {
+    height: auto;
+    padding-top: 0.5px;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    margin-top: 0px;
+    background-color: salmon;
+    border-bottom: 2px solid saddlebrown;
+}
+
+.aside-grid-item-customer span input[type=number] {
+    height: 20px;
+    width: 40px;
+    border-radius: 2px;
+    border: 1px solid #979799;
+}
+
+.aside-grid-item-customer span {
+    overflow: hidden;
+}
+
+.total-item-price {
+    display: grid;
+    margin-bottom: 5px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.aside-grid-item-total {
+    height: auto;
+    text-align: center;
+    border-bottom: 2px solid saddlebrown;
+}
+
+.grid-item-vat {
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-item-total {
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-item-after-discount {
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-item-discount {
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-item-pay {
+    margin-bottom: 5px;
+}
+
+.grid-item-cashback {
+    margin-bottom: 5px;
+}
+
+.aside-grid-item-btn {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.aside-container-grid {
+    display: grid;
+    width: 100%;
+    height: 680px;
+    grid-template-rows: 5% auto 5% 30% 10%;
+}
+
+
+/* Article */
+
+.btn {
+    margin-top: 13px;
+    margin-left: 53px;
+    width: 150px;
+}
+
+ul {
+    display: inline-block;
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+}
+
+article {
+    margin-right: 10px;
+    border-radius: 10px;
+    height: 680px;
+    width: 42%;
+    float: right;
+    background-color: silver;
+}
+
+.article-container-grid {
+    display: grid;
+    grid-template-rows: 1fr 551px 1fr;
+}
+
+.grid-menu-button {
+    border-bottom: 4px solid saddlebrown;
+}
+
+.article-item-menu {
+    padding-top: 5px;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: aliceblue;
+}
+
+.div-btn-menu {
+    float: left;
+    height: 110px;
+    width: 25%;
+    border: 2px solid #979799;
+    border-bottom: 0px;
+}
+
+.btnmenu {
+    width: 100%;
+    height: 100%;
+    border: 0px solid #979799;
+}
+
+.menu-page {
+    padding-top: 10px;
+    text-align: center;
+}
+
+
+/*Modal*/
+
+.mymodal-footer {
+    border-top: 1px solid #979797;
+    margin: 15px;
+}
+
+.btn-primary {
+    margin-left: 164px;
+}
+
+.bill-content {
+    overflow: scroll;
+    height: 300px;
+}
+
+.btnsearch {
+    width: 100px;
+    background-color: blue;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.btnsearch:hover {
+    background-color: cyan;
+}
+
+.txt-search {
+    width: 150px;
+}
+
+.search-group1 {
+    padding-left: 15px;
+    margin: 0;
+}
+
+.form-group-search {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.bill-detail {
+    text-align: center;
+    float: right;
+    width: 300px;
+}
+
+.bill-item {
+    width: 125px;
+    float: left;
+}
+
+.span-bill-detail {
+    margin-left: 190px;
+}
+
+.a-bill-id {
+    color: black;
+}
+
+.div-delete-detail {
+    text-align: center;
+}
+
+.delete-grid-detail {
+    display: grid;
+    grid-template-columns: 70% 15% 15%;
+}
+
+.bill-detail-total {
+    color: red;
+}
+
+.numberList {
+    margin-left: 5px;
+}
+
+.linknumberList {
+    color: black;
+}
+
+.linknumberList:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+.test-togle-main {
+    background-color: brown;
+}
+
+.report-item {
+    border-bottom: 1px solid cornsilk;
+    background-color: #979799;
+    padding-left: 2px;
+    color: black;
+}
+
+.report-item a {
+    color: black;
+}
+
+.toggle-report-group {
+    display: none;
+}
+
+.toggle-report-group-active {
+    display: initial;
+}
+
+.report-item a:hover {
+    color: cornsilk;
+}
+
+.head-effect-active {
+    text-decoration-line: underline;
+    color: blanchedalmond;
+}

@@ -1,0 +1,39 @@
+<?php
+session_start();
+require("connect.php");
+$loadProduct = $_GET["loadProduct"];
+$_SESSION["login"] = false;
+
+if($loadProduct == "loadProduct"){
+    $selectProducts = "SELECT * FROM product";
+    $resultProducts = $mysqli -> query($selectProducts)or die($mysqli->error);
+    //$rowsProducts = $resultProducts -> fetch_array()or die($resultProducts->error);
+    $maxProduct = 3;
+    $pageNumber = $_GET["pageNumber"];
+    $sumData = $resultProducts ->num_rows;
+    $i = 0;
+    $page = $sumData / $maxProduct;
+while($rowsProducts = $resultProducts -> fetch_row()){
+
+    if($i < $maxProduct){
+        $arr[] = $rowsProducts;
+      }
+
+if($i < $page){
+           // echo"<br>";
+			$pageNumberOfi = $i+1.;
+              // echo"<a href='testselectdata.php?pageNumber=".$pageNumberOfi."'>".$pageNumberOfi." </a>";
+         $arrPageNumber[] = $pageNumberOfi;
+         
+        }
+        $i++;
+  
+}
+   // print_r($arr);
+    echo json_encode(array("data"=>$arr,"pageNo"=>$arrPageNumber));
+   //echo"test";
+}
+
+
+
+?>

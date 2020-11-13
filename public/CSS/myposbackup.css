@@ -1,0 +1,240 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    font-family: Quicksand, NotoSansJP, Montserrat, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, ;
+}
+
+header {
+    width: 100%;
+}
+
+.header-container-grid {
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    background-color: #979799;
+}
+
+.span-1,
+.span-2,
+.span-3,
+.span-4,
+.span-5,
+.span-6 {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.header-grid-item {
+    cursor: pointer;
+}
+
+.main-grid {
+    height: auto;
+    width: 100%;
+    margin-top: 15px;
+}
+
+
+/* ส่วน Aside */
+
+aside {
+    width: 56%;
+    height: auto;
+    float: left;
+    background-color: silver;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.aside-grid-item-head {
+    height: auto;
+    border-radius: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 40% 15% 15% 15% 15%;
+}
+
+.aside-grid-item-head .grid-item-head {
+    border-right: 2px solid #979799;
+    background-color: aliceblue;
+}
+
+.aside-grid-item-head .grid-item-head:last-child {
+    border-right: none;
+    border-top-right-radius: 10px;
+}
+
+.grid-item-head input[type=number] {
+    height: 25px;
+    width: 40px;
+    border-radius: 2px;
+    border: 1px solid #979799;
+}
+
+input[type=text] {
+    border-radius: 2px;
+    border: 1px solid #979799;
+}
+
+.grid-item-head-productName {
+    border-right: 2px solid #979799;
+    border-top-left-radius: 10px;
+    background-color: aliceblue;
+}
+
+.aside-grid-item-detail {
+    height: auto;
+    margin-top: 0px;
+    text-align: center;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 1fr;
+    border-bottom: 2px solid saddlebrown;
+}
+
+.grid-item-blox-menu {
+    height: auto;
+    margin-top: 0px;
+    text-align: center;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 40% 15% 15% 15% 15%;
+    border-bottom: 2px solid saddlebrown;
+}
+
+.aside-grid-item-customer {
+    height: auto;
+    padding-top: 0.5px;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    margin-top: 0px;
+    background-color: salmon;
+    border-bottom: 2px solid saddlebrown;
+}
+
+.aside-grid-item-customer span input[type=number] {
+    height: 20px;
+    width: 40px;
+    border-radius: 2px;
+    border: 1px solid #979799;
+}
+
+.aside-grid-item-customer span {
+    overflow: hidden;
+}
+
+.total-item-price {
+    display: grid;
+    margin-bottom: 5px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.aside-grid-item-total {
+    height: auto;
+    text-align: center;
+    border-bottom: 2px solid saddlebrown;
+}
+
+.grid-item-vat {
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-item-total {
+    margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-item-pay {
+    margin-bottom: 5px;
+}
+
+.grid-item-cashback {
+    margin-bottom: 5px;
+}
+
+.aside-grid-item-btn {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.aside-container-grid {
+    height: auto;
+    width: 100%;
+    display: grid;
+    height: 640px;
+    grid-template-rows: 5% auto 5% 30% 10%;
+}
+
+
+/* Article */
+
+.btn {
+    margin-top: 13px;
+    margin-left: 53px;
+    width: 150px;
+}
+
+ul {
+    display: inline-block;
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+}
+
+article {
+    margin-right: 10px;
+    border-radius: 10px;
+    height: 640px;
+    width: 42%;
+    float: right;
+    background-color: silver;
+}
+
+.article-container-grid {
+    display: grid;
+    grid-template-rows: 1fr 551px 1fr;
+}
+
+.grid-menu-button {
+    border-bottom: 4px solid saddlebrown;
+}
+
+.article-item-menu {
+    padding-top: 5px;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: aliceblue;
+}
+
+.div-btn-menu {
+    float: left;
+    height: 110px;
+    width: 25%;
+    border: 2px solid #979799;
+    border-bottom: 0px;
+}
+
+.btnmenu {
+    width: 100%;
+    height: 100%;
+    border: 0px solid #979799;
+}
+
+.menu-page {
+    padding-top: 10px;
+    text-align: center;
+}

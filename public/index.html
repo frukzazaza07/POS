@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="CSS/mypos2.css">
+
+
+    <title>POS</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container-grid">
+            <div class="header-grid-logo">
+                <span>LOGO</span>
+            </div>
+            <div class="header-grid-item">
+                <span class="span-1">รายงาน</span>
+            </div>
+            <div class="header-grid-item">
+                <span class="span-2">หน้าขาย</span>
+            </div>
+            <div class="header-grid-item">
+                <span class="span-3">หน้าเจ้าของร้าน</span>
+            </div>
+            <div class="header-grid-item">
+                <span class="span-4">ประวัติการขาย</span>
+            </div>
+            <div class="header-grid-item">
+                <span class="span-5">ลูกค้า</span>
+            </div>
+            <div class="header-grid-item">
+                <span class="span-6">ช่วยเหลือ</span>
+            </div>
+            <div class="header-grid-item">
+                <span>ผู้ใช้</span> <span>ตำแหน่ง</span>
+                <p>เวลา</p>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="section-container-grid">
+            <div class="section-grid-item">
+
+            </div>
+            <div class="section-grid-item">
+
+            </div>
+            <div class="section-grid-item">
+
+            </div>
+            <div class="section-grid-item">
+
+            </div>
+        </div>
+    </section>
+
+    <div class="main-grid">
+
+        <aside>
+            <div class="aside-container-grid">
+                <div class="aside-grid-item-head">
+                    <div class="grid-item-head-productName">
+                        <span>ชื่อสินค้า</span>
+                    </div>
+                    <div class="grid-item-head">
+                        <span>ราคา </span>
+                    </div>
+                    <div class="grid-item-head">
+                        <span>จำนวน</span>
+                    </div>
+                    <div class="grid-item-head">
+                        <span>รวม</span>
+                    </div>
+                    <div class="grid-item-head">
+                        <span>ลบรายการ</span>
+                    </div>
+                </div>
+
+                <div class="aside-grid-item-detail" id="aside-grid-item-detail" width="100%">
+                    <!-- ตรงนี้ควรเปลี่ยน tag iframe textarea-->
+
+                    <!-- **********ไม่ใช้แล้วไปใช้การกดปุ่มแทน***********
+                    <div class="grid-item-head">
+                        <span id="product-name">กุ้งเผา 1 กก.</span>
+                    </div>
+                    <div class="grid-item-head">
+                        <span id="product-price">500</span>
+                    </div>
+                    <div class="grid-item-head">
+                        <input id="product-quantity" type="number" value="1" autofocus>
+                    </div>
+                    <div class="grid-item-head">
+                        <span id="product-total">500</span>
+                    </div>
+                    <div class="grid-item-head">
+                        <span id="product-delete">x</span>
+                    </div>
+                    
+                  
+                    -->
+                </div>
+                <div class="aside-grid-item-customer">
+                    <span id="customer-quantity">จำนวนลูกค้า:&nbsp;<input type="number" value="1" ></span>
+                </div>
+                <div class="aside-grid-item-total">
+                    <div class="total-item-price">
+                        <span>ราคาก่อน Vat:</span> <span id="total-beforeVat"></span>
+                    </div>
+                    <div class="grid-item-vat">
+                        <span>Vat 7%:</span> <span id="total-vat">&nbsp;&nbsp;</span>
+                    </div>
+                    <div class="grid-item-total">
+                        <span>รวม:</span> <span id="total-afterVat"></span>
+                    </div>
+                    <div class="grid-item-discount">
+                        <span>ส่วนลด:</span> <span id="total-discount">&nbsp;&nbsp;</span>
+                    </div>
+                    <div class="grid-item-after-discount">
+                        <span>รวมเงินที่ต้องชำระ:</span> <span id="total-after-discount"></span>
+                    </div>
+                    <div class="grid-item-pay">
+                        <span id="">เงินที่ลูกค้าชำระ:</span> <span><input type="text" placeholder="ระบุจำนวนเงิน" id="total-pay"  value="">&nbsp;บาท </span><span id="error-pay"></span>
+                    </div>
+                    <div class="grid-item-cashback" id="grid-item-cashback">
+                        <span>เงินทอน:</span > <span id="total-cashBack"></span> บาท
+                    </div>
+                </div>
+                <div class="aside-grid-item-btn">
+                    <div class="grid-item-btn">
+                        <button id="btn-void" class="btn btn-danger" data-toggle="modal" data-target="#deleteBill">ยกเลิกบิล</button>
+                    </div>
+                    <div class="grid-item-btn">
+                        <button id="btn-note" class="btn btn-secondary">หมายเหตุ</button>
+                    </div>
+                    <div class="grid-item-btn">
+                        <button id="btn-discount" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">ส่วนลด</button>
+                    </div>
+                    <div class="grid-item-btn">
+                        <button id="btn-confirm" class="btn btn-success">ยืนยันชำระเงิน</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <article>
+            <div class="article-container-grid">
+                <div class="article-item-menu">
+                    <span>หมวดหมู่สินค้า:</span>
+                </div>
+                <div class="grid-menu-button" id="grid-menu-button">
+                    <!-- *******************ไม่ใช้แล้ว ไปวนลูปใน JS แทน 
+                    <div class="div-btn-menu">
+                        <button id="btn-menu-1" onclick="" class="btnmenu btn-secondary">เมนูต่าง ๆ</button>
+                    </div>
+                    -->
+
+                </div>
+
+                <div class="article-grid-item">
+                    <div class="menu-page">
+                        <ul>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">ส่วนลด</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+
+                        <div class="form-group-discount">
+                            <input type="hidden" id="hiddenDiscount" name="hiddenDiscount" value="0">
+                            <div class="discount-item">
+                                ส่วนลดระบุ:
+                            </div>
+                            <div class="discount-item">
+                                <input type="radio" id="discount1" name="discount" onclick="" value="1">
+                                <label for="discount1">%</label>
+                            </div>
+                            <div class="discount-item-text">
+                                <input type="text" id="txtDiscount1" name="txtDiscount1" value="0" readonly placeholder="ระบุส่วนลด">
+                                <label for="discount2">%</label>
+                                <h6 style="color: red;" class="error-discount1" id="error-discount1"></h6>
+                            </div>
+                        </div>
+                        <div class="form-group-discount">
+                            ส่วนลดระบุ:
+                            <div class="discount-item">
+                                <input type="radio" id="discount2" name="discount" onclick="" value="2">
+                                <label for="discount2">จำนวน</label>
+
+                            </div>
+                            <div class="discount-item-text">
+                                <input type="text" id="txtDiscount2" name="txtDiscount2" value="0" readonly placeholder="ระบุส่วนลด">
+                                <label for="discount2">บาท</label>
+                                <h6 style="color: red;" class="error-discount2" id="error-discount2"></h6>
+                            </div>
+                        </div>
+                        <div class="form-group-discount"></div>
+
+
+
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="mymodal-footer">
+                        <button class="btn btn-primary" type="submit" onclick="" id="btn-discount-submit">ตกลง</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade"></div>
+
+        <!-- Modal without animation -->
+        <div class="modal"></div>
+    </div>
+    <!-- The Modal -->
+    <div class="modal" id="deleteBill">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">ยกเลิกบิล</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="discount-item">
+                        วันที่:
+                    </div>
+                    <form action="#" id="formSearch" method="GET">
+                        <div class="form-group-search">
+                            <div class="search-group">
+                                <input type="date" id="firstDate" class="txt-search" name="firstDate" value="" placeholder="วันที่เริ่มต้น"> ถึง
+                                <input type="date" id="endDate" name="endDate" class="txt-search" value="" placeholder="วันที่สิ้นสุด">
+                            </div>
+                            <div class="search-group1">
+                                <input type="submit" value="ค้นหา" class="btnsearch" id="searchDate">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="form-group-discount">
+                        เลขที่บิล: <span class="span-bill-detail">รายละเอียดบิล:</span>
+                        <div class="bill-content">
+                            <section class="bill-item"></section>
+                            <section class="div-delete-detail" id="div-delete-detail"></section>
+
+                        </div>
+                    </div>
+                    <div class="group-delete-content">
+
+                    </div>
+
+
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="mymodal-footer">
+                    <button class="btn btn-primary" type="submit" onclick="deleteBillFromBillId(orderBillId)" id="btn-discount-submit">ลบรายการ</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade"></div>
+
+    <!-- Modal without animation -->
+    <div class="modal"></div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script language="JavaScript" type="text/javascript" src="javaScript\pos1.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javaScript\deletebill1.js"></script>
+    <!-- <script language="JavaScript" type="text/javascript" src="javaScript\discount1.js"></script> -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS
+ถ้าเป็น ลิงค์นี้ ajax จะ Error
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+-->
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>

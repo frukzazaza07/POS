@@ -1,0 +1,117 @@
+.header-grid-item-1 {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.header-grid-item {
+    opacity: 1;
+    /*display: inline-block;*/
+}
+
+#head-logout:hover {
+    cursor: pointer;
+    opacity: 0.2;
+}
+
+.header-container-grid {
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(6, 10%) 1fr;
+    /*display: inline-block;
+        position: absolute;*/
+    background-color: #979799;
+}
+
+.report-item {
+    border-bottom: 1px solid cornsilk;
+    background-color: #979799;
+    padding-left: 2px;
+    color: black;
+    overflow: hidden;
+}
+
+.report-item a {
+    color: black;
+}
+
+.toggle-report-group {
+    display: none;
+}
+
+.toggle-report-group-active {
+    opacity: 1;
+    display: initial;
+}
+
+.head-effect-active {
+    text-decoration-line: underline;
+    color: blanchedalmond;
+}
+
+.span-1,
+.span-2,
+.span-3,
+.span-4,
+.span-5,
+.span-6 {
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.span-1:hover,
+.span-2:hover,
+.span-3:hover,
+.span-4:hover,
+.span-5:hover,
+.span-6:hover {
+    text-decoration-line: underline;
+    color: blanchedalmond;
+}
+
+.report-item {
+    border-bottom: 1px solid cornsilk;
+    background-color: #979799;
+    padding-left: 2px;
+    color: black;
+    overflow: hidden;
+}
+
+.report-item a {
+    color: black;
+}
+
+.toggle-report-group {
+    z-index: 999;
+    display: none;
+}
+
+.toggle-report-group-active {
+    z-index: 999;
+    display: initial;
+}
+
+.head-effect-active {
+    text-decoration-line: underline;
+    color: blanchedalmond;
+}
+
+.report-item a:hover {
+    color: cornsilk;
+}
+
+.product_new:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.rows-data:hover {
+    opacity: 0.5;
+}
+
+
+.active {
+    display: initial;
+}

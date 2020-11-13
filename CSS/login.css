@@ -1,0 +1,22 @@
+.login {
+    background: rgb(404, 204, 204);
+    margin-top: 220px;
+    /* Fallback for older browsers without RGBA-support */
+    background: rgba(204, 204, 204, 0.7);
+}
+
+.load-login {
+    display: none;
+    background: rgb(404, 204, 204);
+    background: rgba(204, 204, 204, 0.9);
+    position: fixed;
+    top: 218px;
+    width: 1140px;
+    height: 400px;
+    left: 230px;
+    text-align: center;
+}
+
+.img-load {
+    margin-top: 150px;
+}

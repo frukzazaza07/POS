@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/report.css">
+    <link rel="stylesheet" href="CSS/inventory.css">
+</head>
+
+<body>
+    <div class="header-container-grid">
+        <div class='header-grid-logo'>
+            <span>LOGO</span>
+        </div>
+        <div class='header-grid-item'>
+            <span class='span-1' id='toggleRoportMain'>รายงาน</span>
+            <div class='toggle-report-group' id='toggleReportGroup'>
+                <div class='report-item' id='reportItem'><a href='#'>รายงานยอดขาย</a></div>
+                <div class='report-item' id='reportItem'><a href='#'>รายงานโปรโมชั่น</a></div>
+                <div class='report-item' id='reportItem'><a href='#'>รายงานการยกเลิกบิลใบเสร็จ</a></div>
+                <div class='report-item' id='reportItem'><a href='#'>รายงานสินค้า</a></div>
+            </div>
+        </div>
+        <div class='header-grid-item'>
+            <span class='span-2'>หน้าขาย</span>
+        </div>
+        <div class='header-grid-item'>
+            <span class='span-3'>หน้าเจ้าของร้าน</span>
+        </div>
+        <div class='header-grid-item'>
+            <span class='span-4'>ประวัติการขาย</span>
+        </div>
+        <div class='header-grid-item'>
+            <span class='span-6'>ช่วยเหลือ</span>
+        </div>
+
+        <div class='header-grid-item-1'>
+            <span>ผู้ใช้: </span><span id='head-fullname'></span> <span class=''>ตำแหน่ง: </span><span
+                id='head-position'></span>
+            <p><span>เวลา: </span><span>10.50:20 </span><span id='head-logout'>ออกจากระบบ</span></p>
+        </div>
+
+
+    </div>
+    <div class="container-fluid">
+
+        <article class="container">
+            <div class="product_new" id="template_new" style="width: 50%; float: left; ;background:lightgray">
+                <h4 class="text-center"><img src="img/1-removebg-preview.png" width="50" height="50" alt="">สินค้าใหม่
+                </h4>
+            </div>
+            <div class="product_new" id="template_edit" style="width: 50%; float: right;;background:lightgray">
+                <h4 class="text-center"><img src="img/2-removebg-preview.png" width="50" height="50"
+                        alt="">เพิ่มวัตถุดิบ</h4>
+            </div>
+            <div class="body-template">
+                <div class='form-group'>
+                    <label for='exampleInputEmail1'>เลขที่ใบสั่งซื้อ/ใบเสร็จ</label>
+                    <input type='text' class='form-control' id='product_receipt' aria-describedby=''
+                        placeholder='ระบุเลขที่ใบสั่งซื้อ' required>
+                    <small id='error_receipt' class='form-text text-danger'></small>
+                </div>
+                <div class="form-product-content">
+
+                </div>
+                <center><button class="btn btn-primary btn-lg" onclick='addNewProduct()' id="product_new">เพิ่มสินค้า
+                        +</button></center>
+
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">หมายเหตุเพิ่มเติม</label>
+                    <textarea class="form-control" id="product_note" rows="7"></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success btn-lg btn-block" onclick="insertProduct()"
+                        id="product_insert">บันทึกรายการ</button>
+                </div>
+            </div>
+        </article>
+    </div>
+
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="exampleModalLabel">ค้นหาสินค้า</h5>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">ชื่อ/รหัสสินค้า</label>
+                            <input type="search" class="form-control" onkeyup="searchProduct(this.value)"
+                                id="search-product-name">
+                            <small id='tutorial' class='form-text text-success'>*ค้นหาโดยพิมพ์ชื่อหรือรหัสสินค้า</small>
+                        </div>
+                        <div class="test">
+                            <table class='table table-striped'>
+                                <thead class="thead-dark head-table ">
+                                    <tr>
+                                        <th scope="col " style='text-align:center'>รหัสสินค้า</th>
+                                        <th scope="col " style='text-align:center'>ชื่อสินค้า</th>
+                                        <th scope="col " style='text-align:center'>จำนวนคงเหลือ</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <span class='form-text text-danger info' id='notFound'></span>
+                                </tbody>
+                            </table>
+                            <small id='tutorial' class='form-text text-success'>*คลิกเลือกสินค้า</small>
+                            <small id='error-info' class='form-text text-danger'></small>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer ">
+                    <button type="button " class="btn btn-secondary" data-dismiss="modal">ปิดหน้าต่าง</button>
+                    <button type="button " id="btnConflim" class="btn btn-primary">ยืนยัน</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js "></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
+<script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js "></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js "
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin=" anonymous "></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js "
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous ">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js "
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous ">
+</script>
+<script src="Javascript/inventory.js "></script>
+<script src="Javascript/search_inventory.js "></script>
+
+</html>

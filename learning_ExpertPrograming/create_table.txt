@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS `orders`;
+CREATE TABLE `orders` (
+  `order_id` varchar(15) NOT NULL,
+  `order_productid` varchar(11) NOT NULL,
+  `order_discountid` varchar(11) NOT NULL,
+  `order_quantity_sell` int(11) NOT NULL,
+  `order_producttotal` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

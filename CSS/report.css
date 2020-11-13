@@ -1,0 +1,63 @@
+.content-left-menu {
+    /* Fallback for older browsers without RGBA-support */
+    background: rgba(204, 204, 204, 0.8);
+    height: 750px;
+    width: 20%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.container-main-content {
+    width: 80%;
+    height: 100%;
+    padding: 0px 15px;
+}
+
+.head-table {
+    position: -webkit-sticky;
+    top: 0;
+    padding-top: 15px;
+}
+
+.main-content-head {
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 17% 83%;
+}
+
+.main-left-content {
+    padding-left: 20px;
+    border-right: 1px solid lightgray;
+}
+
+.main-right-content {
+    padding-left: 15px;
+}
+
+.left-menu-head {
+    height: 40px;
+    padding-top: 10px;
+    background-color: lightslategray;
+}
+
+.left-menu-item {
+    margin-top: 15px;
+}
+
+.left-menu-item ul li {
+    list-style: none;
+}
+
+.left-menu-item p a {
+    color: black;
+}
+
+.list-data {
+    padding-right: 20px;
+    text-align: right;
+}

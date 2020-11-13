@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<link rel="stylesheet" href="CSS/login.css">
+
+<body style="background: url(img/product1.jpg);">
+    <div class="container p-5 login">
+        <h4 class="text-light"><b>เข้าสู่ระบบ</b></h4>
+        <form class="" method="POST">
+            <div class="form-group">
+                <label for="exampleInputEmail1"><b>รหัสพนักงาน</b></label>
+                <input type="text" class="form-control" id="txtUsername" aria-describedby="emailHelp" placeholder="รหัสพนักงาน">
+                <p id="alertUsername"></p>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1"><b>รหัสผ่าน</b></label>
+                <input type="password" class="form-control" id="txtPassword" placeholder="รหัสผ่าน">
+                <p id="alertPassword"></p>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your username and password with anyone else.</small>
+            </div>
+            <div class="form-group">
+
+            </div>
+        </form>
+        <button onclick="login()" class="form-control btn btn-primary">เข้าสู่ระบบ</button>
+
+        <div class="load-login">
+            <img src="img/load.gif" class="img-load" width="100px" height="100px">
+        </div>
+    </div>
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script language="JavaScript" type="text/javascript" src="javaScript\login2.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</html>
